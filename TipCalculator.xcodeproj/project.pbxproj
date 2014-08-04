@@ -12,6 +12,7 @@
 		367899DF1976DD7300CB1AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367899DD1976DD7300CB1AEF /* Main.storyboard */; };
 		367899E11976DD7300CB1AEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367899E01976DD7300CB1AEF /* Images.xcassets */; };
 		367899ED1976DD7400CB1AEF /* TipCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367899EC1976DD7400CB1AEF /* TipCalculatorTests.swift */; };
+		367899F71976DDB500CB1AEF /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367899F61976DDB500CB1AEF /* TipCalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		367899E61976DD7400CB1AEF /* TipCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		367899EB1976DD7400CB1AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		367899EC1976DD7400CB1AEF /* TipCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorTests.swift; sourceTree = "<group>"; };
+		367899F61976DDB500CB1AEF /* TipCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		367899CB1976DD7300CB1AEF = {
 			isa = PBXGroup;
 			children = (
+				367899F61976DDB500CB1AEF /* TipCalculatorModel.swift */,
 				367899D61976DD7300CB1AEF /* TipCalculator */,
 				367899E91976DD7400CB1AEF /* TipCalculatorTests */,
 				367899D51976DD7300CB1AEF /* Products */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367899F71976DDB500CB1AEF /* TipCalculatorModel.swift in Sources */,
 				367899DC1976DD7300CB1AEF /* ViewController.swift in Sources */,
 				367899DA1976DD7300CB1AEF /* AppDelegate.swift in Sources */,
 			);
