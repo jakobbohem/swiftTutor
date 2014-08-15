@@ -28,10 +28,17 @@ class TipCalculatorModel
         self.taxPct = taxPct
     }
 
-    func calcTip(tipPct:Double) -> Double
+    func calcTip(tipPct:Double) -> (tipAmount:Double, total:Double)
+    {
+        let tipAmount =  subtotal*tipPct
+        let newTotal = subtotal+tipAmount
+        return (tipAmount, newTotal)
+    }
+    func calcTipAmount(tipPct:Double) -> Double
     {
         return subtotal*tipPct
     }
+    
 
     func printTips()
     {
@@ -43,9 +50,9 @@ class TipCalculatorModel
     }
 
     // note: [Int: Double] == Dictionary<Int, Double>
-    func getTips() -> [Int: Double] {
+    func getTips() -> [Int: (Double, Double)] {
         let possibleTips:[Double] = [0.15, 0.18, 0.20]
-        var retval = Dictionary<Int, Double>()
+        var retval = Dictionary<Int, (Double, Double)>()
 
         for possibleTip in possibleTips {
             let intPct = Int(possibleTip*100)
