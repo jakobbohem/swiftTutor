@@ -11,24 +11,24 @@ import Foundation
 class TipCalculatorModel
 {
     var total: Double
-    var taxPct: Double
+    var percent: Double
 
     var subtotal: Double {
     get {
-        return total / (taxPct+1)
+        return total / (percent+1)
     }
     set(newSubtotal) {
         //...
     }
     }
 
-    init(total:Double, taxPct:Double)
+    init(total:Double, percent:Double)
     {
         self.total = total
-        self.taxPct = taxPct
+        self.percent = percent
     }
 
-    func calcTip(tipPct:Double) -> (tipAmount:Double, total:Double)
+    func calcTip(tipPct:Double) -> (tip:Double, total:Double)
     {
         let tipAmount =  subtotal*tipPct
         let newTotal = subtotal+tipAmount
@@ -50,9 +50,9 @@ class TipCalculatorModel
     }
 
     // note: [Int: Double] == Dictionary<Int, Double>
-    func getTips() -> [Int: (Double, Double)] {
+    func getPossibleTips() -> [Int: (tip:Double,total: Double)] {
         let possibleTips:[Double] = [0.15, 0.18, 0.20]
-        var retval = Dictionary<Int, (Double, Double)>()
+        var retval = Dictionary<Int, (tip:Double, total:Double)>()
 
         for possibleTip in possibleTips {
             let intPct = Int(possibleTip*100)
